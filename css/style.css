@@ -1,9 +1,9 @@
 /* Color Scheme */
 :root {
-    --primary-color: #2c3e50;
-    --secondary-color: #3498db;
-    --tertiary-color: #34495e;
-    --hover-color: #2980b9;
+    --primary-color: #16a085;
+    --secondary-color: #27ae60;
+    --tertiary-color: #377c54;
+    --hover-color: #229954;
     --text-color: #333;
     --light-bg: #ecf0f1;
     --border-color: #ddd;
@@ -141,8 +141,12 @@ button {
 }
 
 button:hover {
-    background-color: var(--hover-color);
+    background-color: var();
 }
+
+
+
+/* Footer */
 
 footer {
     background-color: var(--primary-color);
@@ -154,4 +158,62 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+
+
+/* Mobile-First Responsive Design */
+
+/* Mobile Styles (up to 768px) */
+main {
+    margin: 1rem auto;
+    padding: 0 1rem;
+}
+
+header, footer {
+    padding: 1rem;
+}
+
+nav {
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Tablet Styles (768px-1024px) */
+@media (min-width: 768px) {
+    nav {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    main {
+        padding: 0 1.5rem;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Desktop Styles (1024px and up) */
+@media (min-width: 1024px) {
+    header, footer {
+        padding: 1.5rem 2rem;
+    }
+    main {
+        margin: 2rem auto;
+        padding: 0 2rem;
+    }
+
+    nav {
+        gap: 1.5rem;
+    }
+
+    section h2 {
+        font-size: 2.2rem;
+    }
+
+    form {
+        max-width: 700px;
+    }
 }
